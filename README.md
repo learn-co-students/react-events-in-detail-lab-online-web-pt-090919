@@ -27,7 +27,7 @@ progress through the lab.
 #### `CoordinatesButton`
 
 1.  In the `components/CoordinatesButton.js` file, create a `CoordinatesButton`
-    React component.
+    React component. [ √ DONE ]
 
 2.  This component takes in one prop: `onReceiveCoordinates`. This prop is a
     _function_ passed down from `index.js`. This function is currently just logging
