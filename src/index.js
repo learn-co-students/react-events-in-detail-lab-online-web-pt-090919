@@ -7,8 +7,17 @@ import DelayedButton from './components/DelayedButton';
 
 ReactDOM.render(
   <div>
-    <CoordinatesButton onReceiveCoordinates={ mouseCoordinates => console.log(mouseCoordinates) } />
-    <DelayedButton onDelayedClick={ event => console.log(event) } delay={1500} />
+    <CoordinatesButton onReceiveCoordinates={ mouseCoordinates =>{
+       let [x, y] = [mouseCoordinates.clientX, mouseCoordinates.clientY]  
+          console.log([x,y]) 
+          return [x,y]
+        } }
+       />
+    <DelayedButton onDelayedClick={ (event) =>{ 
+      
+       console.log(event)}} delay={2500}
+      
+      />
   </div>,
   document.getElementById('global')
 );
