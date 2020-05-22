@@ -1,13 +1,13 @@
 import React from 'react';
 export default class DelayedButton extends React.Component{  
-    funk = (event) => {
-            
+    funk = (event) => { 
+            event.persist()
             let persistant = event
             console.log("i am persistant", persistant)
         setTimeout((persistant) => { 
-            console.log("this", this)
+            
             console.log("persistant in timeout", persistant)
-            this.props.onDelayedClick(persistant)
+            this.props.onDelayedClick
         }, this.props.delay);
     }
 
