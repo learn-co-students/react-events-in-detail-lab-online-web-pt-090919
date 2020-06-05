@@ -64,4 +64,4 @@ progress through the lab.
 - [ClientX Mouse Event](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX)
 - [ClientY Mouse Event](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY)
 
-Hello
+Hello World
