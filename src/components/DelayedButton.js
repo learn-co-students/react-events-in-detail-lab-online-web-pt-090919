@@ -1,20 +1,19 @@
 import React from 'react';
 export default class DelayedButton extends React.Component{  
+    constructor(props){
+        super(props);
+        this.funk = this.funk.bind(this)
+    }
     funk = (event) => { 
             event.persist()
-            let persistant = event
-            console.log("i am persistant", persistant)
-        setTimeout((persistant) => { 
-            
-            console.log("persistant in timeout", persistant)
-            this.props.onDelayedClick
-        }, this.props.delay);
-    }
+            let persistant = event 
+        setTimeout(() => this.props.onDelayedClick(persistant), this.props.delay)
+        }
 
     render(){ 
 
         return(<div>
-            <button onClick={this.funk}>Delay Button</button>
+            <button onClick={this.funk} >Delay Button</button>
         </div>)
-    }
+    } 
 }
